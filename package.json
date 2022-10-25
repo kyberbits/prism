@@ -4,12 +4,19 @@
 	"description": "A CSS toolkit.",
 	"main": "prism.css",
 	"targets": {
+		"src": {
+			"source": "src/prism.css",
+			"distDir": ".",
+			"optimize": false,
+			"sourceMap": false
+		},
 		"demo": {
 			"source": "demo/demo.html",
 			"distDir": "var/dist"
 		}
 	},
 	"scripts": {
+		"build": "parcel build --target src && npm run fix",
 		"watch": "parcel serve --target demo --dist-dir var/dist",
 		"lint": "prettier --check .",
 		"fix": "prettier --write ."

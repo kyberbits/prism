@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Prism</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../prism.css" />
+		<link rel="stylesheet" href="../src/prism.css" />
 		<link rel="stylesheet" href="./demo.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
@@ -101,14 +101,15 @@
 					mattis nunc sed blandit. Consectetur libero id faucibus nisl tincidunt
 					eget.
 				</p>
-				<pre class="hljs"><code>package main
+				<pre><code>package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Hello there.")
+	fmt.Println("Hello there.")
 }
-</code></pre>
+</code>
+</pre>
 				<p>
 					Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a.
 					Ut lectus arcu bibendum at varius vel pharetra. Tristique magna sit
@@ -118,7 +119,7 @@ func main() {
 			</section>
 
 			<section>
-				<h3>Details</h3>
+				<h3>Interactive</h3>
 				<hr />
 
 				<details>
@@ -148,113 +149,68 @@ func main() {
 						></textarea>
 					</div>
 
-					<input type="submit" value="Submit!" />
-					<button type="button" disabled>Disabled</button>
-				</form>
-			</section>
-
-			<section>
-				<form>
-					<fieldset>
-						<legend>Choose your favorite monster</legend>
-						<label for="kraken">
-							<input type="radio" id="kraken" name="monster" />
-							Kraken
-						</label>
-						<label for="sasquatch">
-							<input type="radio" id="sasquatch" name="monster" />
-							Sasquatch
-						</label>
-						<label for="mothman">
-							<input type="radio" id="mothman" name="monster" />
-							Mothman
-						</label>
-					</fieldset>
-				</form>
-
-				<form action="#" method="get">
-					<div class="form-example">
-						<label for="name"> Full name </label>
-						<input type="text" name="name" id="name" required />
+					<div>
+						<label for="pet-select">Choose a pet</label>
+						<select name="pets" id="pet-select">
+							<option value="dog">Dog</option>
+							<option value="cat">Cat</option>
+							<option value="hamster">Hamster</option>
+							<option value="parrot">Parrot</option>
+							<option value="spider">Spider</option>
+							<option value="goldfish">Goldfish</option>
+						</select>
 					</div>
-					<div class="form-example">
-						<label for="email"> Email </label>
-						<input type="email" name="email" id="email" required />
+
+					<div>
+						<label for="dino-select">Choose a dinosaur</label>
+						<select id="dino-select">
+							<optgroup label="Theropods">
+								<option>Tyrannosaurus</option>
+								<option>Velociraptor</option>
+								<option>Deinonychus</option>
+							</optgroup>
+							<optgroup label="Sauropods">
+								<option>Diplodocus</option>
+								<option>Saltasaurus</option>
+								<option>Apatosaurus</option>
+							</optgroup>
+						</select>
 					</div>
-					<label for="pet-select">Choose a pet</label>
-					<select name="pets" id="pet-select">
-						<option value="dog">Dog</option>
-						<option value="cat">Cat</option>
-						<option value="hamster">Hamster</option>
-						<option value="parrot">Parrot</option>
-						<option value="spider">Spider</option>
-						<option value="goldfish">Goldfish</option>
-					</select>
-					<div class="form-example">
+
+					<div>
+						<fieldset>
+							<legend>Choose your favorite monster</legend>
+							<label for="kraken">
+								<input type="radio" id="kraken" name="monster" />
+								Kraken
+							</label>
+							<label for="sasquatch">
+								<input type="radio" id="sasquatch" name="monster" />
+								Sasquatch
+							</label>
+							<label for="mothman">
+								<input type="radio" id="mothman" name="monster" />
+								Mothman
+							</label>
+						</fieldset>
+					</div>
+
+					<div>
 						<label for="favnum"> Favorite Number </label>
 						<input type="number" id="favnum" name="favnum" value="" />
 					</div>
-					<div class="form-example">
+
+					<div>
 						<label for="surprise">
 							<input type="checkbox" id="surprise" name="surprise" value="" />
 							Add a surprise
 						</label>
 					</div>
-					<div class="form-example">
-						<input type="submit" value="Subscribe!" />
-					</div>
+
+					<input type="submit" value="Submit!" />
+					<button type="button" disabled>Disabled</button>
 				</form>
 			</section>
-
-			<!-- text area -->
-			<h3>text area</h3>
-			<textarea
-				id="story"
-				name="story"
-				placeholder="It was a dark and stormy night..."
-				rows="7"
-				cols="66"
-			></textarea>
-
-			<!-- interactive elements -->
-			<!-- summary/details -->
-			<h3>summary/details</h3>
-
-			<div class="misc-components">
-				<!-- meter -->
-				<div>
-					<h3>meter</h3>
-					<label for="fuel">Fuel level</label>
-					<meter
-						id="fuel"
-						min="0"
-						max="100"
-						low="33"
-						high="66"
-						optimum="80"
-						value="50"
-					>
-						at 50/100
-					</meter>
-				</div>
-				<!-- optgroup -->
-				<div>
-					<h3>optgroup</h3>
-					<label for="dino-select">Choose a dinosaur</label>
-					<select id="dino-select">
-						<optgroup label="Theropods">
-							<option>Tyrannosaurus</option>
-							<option>Velociraptor</option>
-							<option>Deinonychus</option>
-						</optgroup>
-						<optgroup label="Sauropods">
-							<option>Diplodocus</option>
-							<option>Saltasaurus</option>
-							<option>Apatosaurus</option>
-						</optgroup>
-					</select>
-				</div>
-			</div>
 		</main>
 	</body>
 </html>
