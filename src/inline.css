@@ -56,12 +56,12 @@ blockquote:before {
 	position: absolute;
 	left: 0;
 	height: 100%;
-	border-left: 7px solid var(--border);
-	border-radius: 6px;
+	border-left: 7px solid var(--color-border);
+	border-radius: 7px;
 }
 
 hr {
-	border: 2px solid var(--border);
+	border: var(--border-large);
 }
 
 li {
@@ -74,16 +74,17 @@ p {
 }
 
 a {
-	color: var(--links);
+	color: var(--color-links);
+	border-radius: var(--size-border-radius-small);
 }
 
 code {
-	border-radius: var(--highlight-border-radius, 4px);
+	border-radius: var(--size-border-radius);
 	font-size: 1em;
 	padding: 2px 4px;
-	background-color: var(--background-main);
+	background-color: var(--color-background-highlight);
 
-	border: 1px solid var(--border);
+	border: var(--border);
 	max-width: fit-content;
 	overflow-x: auto;
 }
@@ -103,21 +104,21 @@ sub {
 	line-height: normal;
 }
 
-/* Image */
 img {
-	border-radius: var(--border-radius);
+	border-radius: var(--size-border-radius);
 	max-width: 100%;
 	height: auto;
 }
 
-details details {
-	border: 1px solid #aaa;
-	border-radius: 7px;
+details {
+	border: var(--border);
+	border-radius: var(--size-border-radius-small);
 	padding: 0.5em 0.5em 0;
 }
 
-summary {
+details summary {
 	font-weight: bold;
+	border-radius: var(--size-border-radius-small);
 	margin: -0.5em -0.5em 0;
 	padding: 0.5em;
 }
@@ -127,6 +128,8 @@ details[open] {
 }
 
 details[open] summary {
+	border-radius: var(--size-border-radius-small) var(--size-border-radius-small)
+		0 0;
 	border-bottom: 1px solid #aaa;
 	margin-bottom: 0.5em;
 }
