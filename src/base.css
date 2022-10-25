@@ -1,0 +1,7 @@
+html,
+body {
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: sans-serif;
+	font-size: var(--size-font-base);
+}

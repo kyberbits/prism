@@ -1,11 +1,76 @@
-input,
-button,
-select,
-textarea {
-	margin: 0;
+label {
+	display: block;
+	/* max-width: fit-content; */
 }
 
+/* Form Style */
 button,
+input,
+select,
+textarea {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: var(--border);
+	outline: none;
+	display: inline-block;
+	width: max-content;
+	appearance: none;
+	background-color: var(--color-background-highlight);
+	color: var(--color-text);
+	border-radius: var(--size-border-radius);
+}
+
+/* Checkboxes and Radios */
+input[type="checkbox"],
+input[type="radio"] {
+	vertical-align: middle;
+	position: relative;
+	margin-right: 0.25rem;
+}
+
+input[type="checkbox"] {
+	border-radius: var(--size-border-radius-small);
+}
+
+input[type="radio"] {
+	border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+}
+
+textarea {
+	max-width: 100%;
+	min-width: 50vw;
+	resize: both;
+	width: 100%;
+}
+
+select {
+	padding-right: 1.5rem;
+	background: linear-gradient(
+			225deg,
+			var(--color-text) 49%,
+			var(--color-background-highlight) 50%
+		),
+		var(--color-background-highlight);
+
+	background-position: calc(100% - 0.5rem) center;
+	background-size: 0.5rem 0.5rem;
+	background-repeat: no-repeat;
+	white-space: unset;
+}
+
+button[disabled] {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+/* Pointer Effect */
+button:not([disabled]),
 label,
 select,
 input[type="submit"],
@@ -16,117 +81,11 @@ input[type="radio"] {
 	cursor: pointer;
 }
 
-button {
-	color: var(--color-text);
-	background-color: var(--color-background-highlight);
-	font-family: inherit;
-	font-size: inherit;
-	padding: 6px 15px 6px 15px;
-	border: 1px solid transparent;
-	border-radius: var(--size-border-radius);
-}
-
-button:active {
-	border: var(--border);
-}
-
-button:disabled,
-button[disabled] {
-	border: var(--border);
-	cursor: initial;
-	opacity: 0.55;
-}
-
-label {
-	display: block;
-	max-width: fit-content;
-}
-
-input {
-	font-size: 1em;
-	background-color: var(--color-background-highlight);
-	border: var(--border);
-	color: var(--color-text);
-	margin: 0.5rem 0;
-	padding: 11px;
-	border-radius: var(--size-border-radius);
-	max-width: fit-content;
-	outline: none;
-	display: inline-block;
-	appearance: none;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	vertical-align: middle;
-	position: relative;
-	margin-right: 0.33em;
-	margin-top: 0.31em;
-}
-
-input[type="checkbox"] {
-	border-radius: var(--size-border-radius);
-}
-
-input[type="radio"] {
-	border-radius: 100%;
-}
-
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-	border: 1px solid var(--color-accent);
-	background: var(--color-links);
-}
-
-input[type="checkbox"]:checked {
-	background-image: var(--url-checkbox-icon);
-}
-
-input[type="radio"]:checked {
-	background-image: var(--url-radio-icon);
-}
-
-textarea {
-	font-family: inherit;
-	font-size: 1em;
-	background-color: var(--color-background-highlight);
-	border: var(--border);
-	padding: 11px;
-	margin-bottom: 0.5rem;
-	color: var(--color-text);
-	border-radius: var(--size-border-radius);
-	outline: none;
-	resize: none;
-	max-width: 100%;
-}
-
-select {
-	appearance: none;
-	background-color: var(--color-background-highlight);
-	background-image: var(--url-select-icon);
-	background-position: right 0.7em top 50%, 0 0;
-	background-repeat: no-repeat, repeat;
-	background-size: 0.65em auto, 100%;
-	border-radius: var(--size-border-radius);
-	border: var(--border);
-	box-sizing: border-box;
-	color: var(--color-text);
-	display: inline-block;
-	font-size: 1rem;
-	margin: 0.5rem 0;
-	max-width: fit-content;
-	padding: 0.5rem;
-	vertical-align: middle;
-}
-
-select:is([multiple]) {
-	background: none;
-	height: fit-content;
-}
-
-fieldset:hover,
-input:hover,
-textarea:hover,
-select:hover {
+/* Hover Effect only if it's not */
+button:not([disabled]):hover,
+fieldset:not(:focus):hover,
+input:not(:focus):hover,
+textarea:not(:focus):hover,
+select:not(:focus):hover {
 	border-color: var(--color-text-highlight);
 }
