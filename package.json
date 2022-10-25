@@ -1,0 +1,31 @@
+{
+	"name": "prism",
+	"version": "1.0.0",
+	"description": "A CSS toolkit.",
+	"main": "prism.css",
+	"targets": {
+		"demo": {
+			"source": "demo/demo.html",
+			"distDir": "var/dist"
+		}
+	},
+	"scripts": {
+		"watch": "parcel serve --target demo --dist-dir var/dist",
+		"lint": "prettier --check .",
+		"fix": "prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kyberbits/prism.git"
+	},
+	"author": "kyberbits",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kyberbits/prism/issues"
+	},
+	"homepage": "https://github.com/kyberbits/prism#readme",
+	"devDependencies": {
+		"parcel": "^2.7.0",
+		"prettier": "2.7.1"
+	}
+}
