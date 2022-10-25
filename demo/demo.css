@@ -5,6 +5,14 @@ section {
 	border-radius: var(--border-radius);
 }
 
+section > *:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
 section form div {
 	padding-bottom: 1rem;
+}
+
+section form div > * {
+	margin-top: 0.5rem;
 }

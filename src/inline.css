@@ -58,6 +58,12 @@ a {
 	border-radius: var(--size-border-radius-small);
 }
 
+/* blockquote, */
+ul,
+ol {
+	padding-left: 2rem;
+}
+
 li {
 	line-height: 1.6em;
 }

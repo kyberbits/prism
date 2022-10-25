@@ -69,6 +69,14 @@ button[disabled] {
 	opacity: 0.5;
 }
 
+fieldset {
+	padding: 0.5rem;
+}
+
+fieldset label:not(:last-child) {
+	padding-bottom: 0.5rem;
+}
+
 /* Pointer Effect */
 button:not([disabled]),
 label,
