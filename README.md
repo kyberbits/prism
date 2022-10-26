@@ -1,12 +1,10 @@
 # prism
 A CSS toolkit.
 
-
-Usage:
-- Include
-- Use the single css file to get everything [./prism.css](./prism.css)
-- Use any component you would like: [./src/](./src/)
-- Theme using
+## Features
+- No layout support
+- No CSS classes
+- Dark and Light mode build-in
 
 ## Option 1: Use Everything
 Import the combined CSS file: [./prism.css](./prism.css)
