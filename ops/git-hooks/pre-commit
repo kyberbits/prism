@@ -7,5 +7,5 @@
 #
 # To enable this hook, rename this file to "pre-commit".
 
-make build lint
+make lint build
 git add prism.css
