@@ -1,0 +1,4 @@
+*:focus {
+	outline: 2px var(--color-accent) solid;
+	outline-offset: 4px;
+}

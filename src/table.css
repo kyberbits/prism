@@ -1,0 +1,43 @@
+table {
+	background: var(--color-border);
+	border-collapse: collapse;
+	border-radius: var(--size-border-radius);
+	overflow: hidden;
+	width: fit-content;
+}
+
+/* Background Colors */
+table thead th {
+	background: var(--color-background-highlight);
+}
+
+table tbody td {
+	background: var(--color-background);
+}
+
+/* Hover Effect */
+table tr:hover td {
+	background-color: var(--color-background-highlight);
+}
+
+/* Borders */
+table {
+	border: var(--border-large);
+}
+
+table tr {
+	border-bottom: var(--border-large);
+}
+
+table tr th,
+table tr td {
+	border-right: var(--border-large);
+}
+
+/* Cell Positioning */
+table td,
+table th {
+	padding: 0.5rem;
+	text-align: left;
+	vertical-align: top;
+}
