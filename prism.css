@@ -285,6 +285,7 @@ table th {
 	--size-border-radius-small: calc(var(--size-border-radius) / 2);
 	--size-border-radius: 10px;
 	--size-font-base: 12pt;
+	--size-font-base3: 12pt;
 }
 
 @media (prefers-color-scheme: dark) {
