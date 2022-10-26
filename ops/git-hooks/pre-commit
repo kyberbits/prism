@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+git add src
 make lint build
 git add prism.css
