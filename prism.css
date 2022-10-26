@@ -6,27 +6,82 @@
 	padding: 0;
 }
 
-html,
-body {
-	font-size: var(--size-font-base);
-	color: var(--color-text);
-	background: var(--color-background);
-	margin: 0;
-	font-family: sans-serif;
+label {
+	display: block;
 }
 
-:focus {
-	outline: 2px var(--color-accent) solid;
-}
-
-input,
 button,
+input,
 select,
 textarea {
-	margin: 0;
+	border: var(--border);
+	width: max-content;
+	appearance: none;
+	background-color: var(--color-background-highlight);
+	color: var(--color-text);
+	border-radius: var(--size-border-radius);
+	outline: none;
+	padding: 0.5rem;
+	font-size: 1rem;
+	display: inline-block;
 }
 
-button,
+input[type="checkbox"],
+input[type="radio"] {
+	vertical-align: middle;
+	margin-right: 0.25rem;
+	position: relative;
+}
+
+input[type="checkbox"] {
+	border-radius: var(--size-border-radius-small);
+}
+
+input[type="radio"] {
+	border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+}
+
+textarea {
+	max-width: 100%;
+	min-width: 50vw;
+	resize: both;
+	width: 100%;
+}
+
+select {
+	background: linear-gradient(
+			225deg,
+			var(--color-text) 49%,
+			var(--color-background-highlight) 50%
+		),
+		var(--color-background-highlight);
+	white-space: unset;
+	background-position: calc(100% - 0.5rem);
+	background-repeat: no-repeat;
+	background-size: 0.5rem 0.5rem;
+	padding-right: 1.5rem;
+}
+
+button[disabled] {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+fieldset {
+	padding: 0.5rem;
+}
+
+fieldset label:not(:last-child) {
+	padding-bottom: 0.5rem;
+}
+
+button:not([disabled]),
 label,
 select,
 input[type="submit"],
@@ -37,118 +92,11 @@ input[type="radio"] {
 	cursor: pointer;
 }
 
-button {
-	color: var(--color-text);
-	background-color: var(--color-background-highlight);
-	font-family: inherit;
-	font-size: inherit;
-	border-radius: var(--size-border-radius);
-	border: 1px solid #0000;
-	padding: 6px 15px;
-}
-
-button:active {
-	border: var(--border);
-}
-
-button:disabled,
-button[disabled] {
-	border: var(--border);
-	cursor: initial;
-	opacity: 0.55;
-}
-
-label {
-	max-width: fit-content;
-	display: block;
-}
-
-input {
-	background-color: var(--color-background-highlight);
-	border: var(--border);
-	color: var(--color-text);
-	border-radius: var(--size-border-radius);
-	max-width: fit-content;
-	appearance: none;
-	outline: none;
-	margin: 0.5rem 0;
-	padding: 11px;
-	font-size: 1em;
-	display: inline-block;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	vertical-align: middle;
-	margin-top: 0.31em;
-	margin-right: 0.33em;
-	position: relative;
-}
-
-input[type="checkbox"] {
-	border-radius: var(--size-border-radius);
-}
-
-input[type="radio"] {
-	border-radius: 100%;
-}
-
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-	border: 1px solid var(--color-accent);
-	background: var(--color-links);
-}
-
-input[type="checkbox"]:checked {
-	background-image: var(--url-checkbox-icon);
-}
-
-input[type="radio"]:checked {
-	background-image: var(--url-radio-icon);
-}
-
-textarea {
-	background-color: var(--color-background-highlight);
-	border: var(--border);
-	color: var(--color-text);
-	border-radius: var(--size-border-radius);
-	resize: none;
-	max-width: 100%;
-	outline: none;
-	margin-bottom: 0.5rem;
-	padding: 11px;
-	font-family: inherit;
-	font-size: 1em;
-}
-
-select {
-	appearance: none;
-	background-color: var(--color-background-highlight);
-	background-image: var(--url-select-icon);
-	border-radius: var(--size-border-radius);
-	border: var(--border);
-	box-sizing: border-box;
-	color: var(--color-text);
-	max-width: fit-content;
-	vertical-align: middle;
-	background-position: right 0.7em top 50%, 0 0;
-	background-repeat: no-repeat, repeat;
-	background-size: 0.65em, 100%;
-	margin: 0.5rem 0;
-	padding: 0.5rem;
-	font-size: 1rem;
-	display: inline-block;
-}
-
-select:is([multiple]) {
-	height: fit-content;
-	background: none;
-}
-
-fieldset:hover,
-input:hover,
-textarea:hover,
-select:hover {
+button:not([disabled]):hover,
+fieldset:not(:focus):hover,
+input:not(:focus):hover,
+textarea:not(:focus):hover,
+select:not(:focus):hover {
 	border-color: var(--color-text-highlight);
 }
 
@@ -198,6 +146,51 @@ th {
 	font-weight: 700;
 }
 
+hr {
+	border: var(--border-large);
+}
+
+p {
+	line-height: 1.6em;
+	display: block;
+}
+
+a {
+	color: var(--color-links);
+	border-radius: var(--size-border-radius-small);
+}
+
+ul,
+ol {
+	padding-left: 2rem;
+}
+
+li {
+	line-height: 1.6em;
+}
+
+img {
+	border-radius: var(--size-border-radius);
+	max-width: 100%;
+	height: auto;
+}
+
+code {
+	background-color: var(--color-background-highlight);
+	border-radius: var(--size-border-radius);
+	border: var(--border);
+	max-width: fit-content;
+	padding: 2px 4px;
+	font-size: 1em;
+	overflow-x: auto;
+}
+
+pre > code {
+	padding: 0.5rem 1rem;
+	display: block;
+	overflow-x: auto;
+}
+
 blockquote {
 	margin: 0;
 	padding-left: 1.5rem;
@@ -212,55 +205,6 @@ blockquote:before {
 	display: block;
 	position: absolute;
 	left: 0;
-}
-
-hr {
-	border: var(--border-large);
-}
-
-li {
-	line-height: 1.6em;
-}
-
-p {
-	line-height: 1.6em;
-	display: block;
-}
-
-a {
-	color: var(--color-links);
-	border-radius: var(--size-border-radius-small);
-}
-
-code {
-	border-radius: var(--size-border-radius);
-	background-color: var(--color-background-highlight);
-	border: var(--border);
-	max-width: fit-content;
-	padding: 2px 4px;
-	font-size: 1em;
-	overflow-x: auto;
-}
-
-pre > code {
-	padding: 0.5rem 1rem;
-	display: block;
-	overflow-x: auto;
-}
-
-pre {
-	margin: 0;
-}
-
-sup,
-sub {
-	line-height: normal;
-}
-
-img {
-	border-radius: var(--size-border-radius);
-	max-width: 100%;
-	height: auto;
 }
 
 details {
@@ -291,7 +235,6 @@ table {
 	background: var(--color-border);
 	border-collapse: collapse;
 	border-radius: var(--size-border-radius);
-	border: var(--border-large);
 	width: fit-content;
 	overflow: hidden;
 }
@@ -304,14 +247,12 @@ table tbody td {
 	background: var(--color-background);
 }
 
-table td,
-table th {
-	text-align: left;
-	padding: 8px;
-}
-
 table tr:hover td {
 	background-color: var(--color-background-highlight);
+}
+
+table {
+	border: var(--border-large);
 }
 
 table tr {
@@ -321,6 +262,13 @@ table tr {
 table tr th,
 table tr td {
 	border-right: var(--border-large);
+}
+
+table td,
+table th {
+	text-align: left;
+	vertical-align: top;
+	padding: 0.5rem;
 }
 
 :root {
@@ -337,9 +285,6 @@ table tr td {
 	--size-border-radius-small: calc(var(--size-border-radius) / 2);
 	--size-border-radius: 10px;
 	--size-font-base: 12pt;
-	--url-select-icon: url("data:image/svg+xml,%3Csvg width='292' height='292' viewBox='0 0 292 292' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%23222222' stroke='none' d='M 287 69 C 283.606537 65.469971 278.895844 63.513214 274 63.600006 L 18.4 63.600006 C 13.4 63.600006 9.1 65.400009 5.5 69 C 1.984143 72.328568 -0.005267 76.958466 -0 81.800003 C -0 86.800003 1.8 91.100006 5.4 94.699997 L 133.399994 222.600006 C 137 226.200012 141.199997 228 146.199997 228 C 151.199997 228 155.399994 226.200012 159 222.600006 L 287 94.600006 C 290.5 91.100006 292.399994 86.800003 292.399994 81.800003 C 292.399994 76.800003 290.5 72.600006 286.899994 69 Z'/%3E%3C/svg%3E");
-	--url-radio-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
-	--url-checkbox-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.5' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -352,6 +297,18 @@ table tr td {
 		--color-text-highlight: #888;
 		--color-text: #efefef;
 		--size-border-radius: 0;
-		--url-select-icon: url("data:image/svg+xml,%3Csvg width='292' height='292' viewBox='0 0 292 292' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath id='Path' fill='%23ffffff' stroke='none' d='M 287 69 C 283.606537 65.469971 278.895844 63.513214 274 63.600006 L 18.4 63.600006 C 13.4 63.600006 9.1 65.400009 5.5 69 C 1.984143 72.328568 -0.005267 76.958466 -0 81.800003 C -0 86.800003 1.8 91.100006 5.4 94.699997 L 133.399994 222.600006 C 137 226.200012 141.199997 228 146.199997 228 C 151.199997 228 155.399994 226.200012 159 222.600006 L 287 94.600006 C 290.5 91.100006 292.399994 86.800003 292.399994 81.800003 C 292.399994 76.800003 290.5 72.600006 286.899994 69 Z'/%3E%3C/svg%3E");
 	}
+}
+
+:focus {
+	outline: 2px var(--color-accent) solid;
+	outline-offset: 4px;
+}
+
+html,
+body {
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: sans-serif;
+	font-size: var(--size-font-base);
 }
