@@ -3,8 +3,13 @@ A CSS toolkit.
 
 ## Features
 - No layout support
-- No CSS classes
+- No CSS classes (almost)
 - Dark and Light mode build-in
+
+## Control of Dark Mode
+- Default: match system (prefers-color-scheme)
+- Disable Dark Mode: Add `disable-dark-mode` class to the `<html>` tag
+- Force Dark Mode: Add `force-dark-mode` class to the `<html>` tag
 
 ## Option 1: Use Everything
 Import the combined CSS file: [./prism.css](./prism.css)
@@ -16,10 +21,10 @@ Import the combined CSS file: [./prism.css](./prism.css)
 Import the each CSS file individually: [./src/](./src/)
 ```css
 /* Example */
-@import url("kyberbits/prism/src/variables.css");
-@import url("kyberbits/prism/src/reset.css");
-@import url("kyberbits/prism/src/inline.css");
-@import url("kyberbits/prism/src/form.css");
+@import url("../node_modules/@kyberbits/prism/src/variables.css");
+@import url("../node_modules/@kyberbits/prism/src/reset.css");
+@import url("../node_modules/@kyberbits/prism/src/inline.css");
+@import url("../node_modules/@kyberbits/prism/src/form.css");
 ```
 The correct order and full list can be found here: [./src/prism.css](./src/prism.css)
 

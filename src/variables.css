@@ -1,31 +1,84 @@
 :root {
-	/* Full values */
-	--border-large: 1px solid var(--color-border);
-	--border: 1px solid var(--color-border);
-	--color-accent: #0057ad;
-	--color-background-highlight: #f1f1f1;
-	--color-background: #fff;
-	--color-border: #dddddd;
-	--color-links: var(--color-accent);
-	--color-shadow: #545454;
-	--color-text-highlight: #b8b8b8;
-	--color-text: #1c1d1e;
-	--size-border-radius-small: calc(var(--size-border-radius) / 2);
-	--size-border-radius: 10px;
-	--size-font-base: 12pt;
+	/* Default Values */
+	--default-size-border-radius-small: calc(var(--size-border-radius) / 2);
+	--default-size-border-radius: 10px;
+	--default-size-font-base: 12pt;
+	--default-border-large: 2px solid var(--color-border);
+	--default-border: 1px solid var(--color-border);
+	/* Light Values */
+	--light-border-large: var(--default-border-large);
+	--light-border: var(--default-border);
+	--light-color-accent: #0057ad;
+	--light-color-background-highlight: #f1f1f1;
+	--light-color-background: #fff;
+	--light-color-border: #dddddd;
+	--light-color-links: var(--color-accent);
+	--light-color-text-highlight: #b8b8b8;
+	--light-color-text: #1c1d1e;
+	--light-size-border-radius-small: var(--default-size-border-radius-small);
+	--light-size-border-radius: var(--default-size-border-radius);
+	--light-size-font-base: var(--default-size-font-base);
+	/* Dark Colors */
+	--dark-border-large: var(--default-border-large);
+	--dark-border: var(--default-border);
+	--dark-color-accent: #00bfff;
+	--dark-color-background-highlight: #222;
+	--dark-color-background: #0f0f0f;
+	--dark-color-border: #444;
+	--dark-color-links: var(--default-color-accent);
+	--dark-color-text-highlight: #888;
+	--dark-color-text: #efefef;
+	--dark-size-border-radius-small: var(--default-size-border-radius-small);
+	--dark-size-border-radius: var(--default-size-border-radius);
+	--dark-size-font-base: var(--default-size-font-base);
 }
 
+/* Default to light values */
+html {
+	--border-large: var(--light-border-large);
+	--border: var(--light-border);
+	--color-accent: var(--light-color-accent);
+	--color-background-highlight: var(--light-color-background-highlight);
+	--color-background: var(--light-color-background);
+	--color-border: var(--light-color-border);
+	--color-links: var(--light-color-links);
+	--color-text-highlight: var(--light-color-text-highlight);
+	--color-text: var(--light-color-text);
+	--size-border-radius-small: var(--light-size-border-radius-small);
+	--size-border-radius: var(--light-size-border-radius);
+	--size-font-base: var(--light-size-font-base);
+}
+
+/* Set all variables to dark values when forced */
+html.force-dark-mode {
+	--border-large: var(--dark-border-large);
+	--border: var(--dark-border);
+	--color-accent: var(--dark-color-accent);
+	--color-background-highlight: var(--dark-color-background-highlight);
+	--color-background: var(--dark-color-background);
+	--color-border: var(--dark-color-border);
+	--color-links: var(--dark-color-links);
+	--color-text-highlight: var(--dark-color-text-highlight);
+	--color-text: var(--dark-color-text);
+	--size-border-radius-small: var(--dark-size-border-radius-small);
+	--size-border-radius: var(--dark-size-border-radius);
+	--size-font-base: var(--dark-size-font-base);
+}
+
+/* Auto set all variables to dark values */
 @media (prefers-color-scheme: dark) {
-	:root {
-		/* Change colors for dark mode */
-		--color-accent: #00bfff;
-		--color-background-highlight: #222;
-		--color-background: #0f0f0f;
-		--color-border: #444;
-		--color-shadow: #bebebe;
-		--color-text-highlight: #888;
-		--color-text: #efefef;
-		/* Remove border radius for dark mode */
-		--size-border-radius: 0;
+	html:not(.disable-dark-mode) {
+		--border-large: var(--dark-border-large);
+		--border: var(--dark-border);
+		--color-accent: var(--dark-color-accent);
+		--color-background-highlight: var(--dark-color-background-highlight);
+		--color-background: var(--dark-color-background);
+		--color-border: var(--dark-color-border);
+		--color-links: var(--dark-color-links);
+		--color-text-highlight: var(--dark-color-text-highlight);
+		--color-text: var(--dark-color-text);
+		--size-border-radius-small: var(--dark-size-border-radius-small);
+		--size-border-radius: var(--dark-size-border-radius);
+		--size-font-base: var(--dark-size-font-base);
 	}
 }

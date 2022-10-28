@@ -22,16 +22,16 @@ table tr:hover td {
 
 /* Borders */
 table {
-	border: var(--border-large);
+	border: var(--border);
 }
 
 table tr {
-	border-bottom: var(--border-large);
+	border-bottom: var(--border);
 }
 
 table tr th,
 table tr td {
-	border-right: var(--border-large);
+	border-right: var(--border);
 }
 
 /* Cell Positioning */
