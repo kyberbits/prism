@@ -2,8 +2,7 @@
 /var/
 
 # Project Config and Secrets
-/.env.local
-/.env.*.local
+/.env*local
 
 # NPM Temporary Files
 /node_modules/

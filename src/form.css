@@ -70,6 +70,7 @@ button[disabled] {
 }
 
 fieldset {
+	border: var(--border);
 	padding: 0.5rem;
 }
 
@@ -91,7 +92,6 @@ input[type="radio"] {
 
 /* Hover Effect only if it's not */
 button:not([disabled]):hover,
-fieldset:not(:focus):hover,
 input:not(:focus):hover,
 textarea:not(:focus):hover,
 select:not(:focus):hover {

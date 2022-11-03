@@ -9,28 +9,28 @@ full: clean lint test build
 build: build-npm
 
 build-npm:
-	npm install
+	[ -d node_modules ] || npm install
 	npm run build
 
 ## Test the project
 test: test-npm
 
 test-npm:
-	npm install
+	[ -d node_modules ] || npm install
 	npm run test
 
 ## Lint the project
 lint: lint-npm
 
 lint-npm:
-	npm install
+	[ -d node_modules ] || npm install
 	npm run lint
 
 ## Fix the project
 fix: fix-npm
 
 fix-npm:
-	npm install
+	[ -d node_modules ] || npm install
 	npm run fix
 
 ## Watch the project
@@ -38,9 +38,9 @@ watch:
 	make -j1 watch-npm
 
 watch-npm:
-	npm install
+	[ -d node_modules ] || npm install
 	npm run watch
 
 ## Clean the project
 clean:
-	git clean -Xdff
+	git clean -Xdff --exclude="!.env*local"
