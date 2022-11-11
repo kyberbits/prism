@@ -6,7 +6,7 @@
 	--default-border: 2px solid var(--color-border);
 	/* Light Values */
 	--light-border: var(--default-border);
-	--light-color-accent: #2188ff;
+	--light-color-accent: #0057ad;
 	--light-color-background-highlight: #f6f8fa;
 	--light-color-background: #ffffff;
 	--light-color-border: #e2e4e8;
@@ -18,11 +18,11 @@
 	--light-size-font-base: var(--default-size-font-base);
 	/* Dark Colors */
 	--dark-border: var(--default-border);
-	--dark-color-accent: #005dc5;
+	--dark-color-accent: #00bfff;
 	--dark-color-background-highlight: #24292e;
 	--dark-color-background: #191d20;
 	--dark-color-border: #4d545b;
-	--dark-color-links: var(--default-color-accent);
+	--dark-color-links: var(--color-accent);
 	--dark-color-text-highlight: #87929e;
 	--dark-color-text: #e2e4e8;
 	--dark-size-border-radius-small: var(--default-size-border-radius-small);
