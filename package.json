@@ -5,13 +5,17 @@
 	"main": "prism.css",
 	"targets": {
 		"src": {
-			"source": "src/prism.css",
+			"source": [
+				"src/prism.css"
+			],
 			"distDir": ".",
 			"optimize": false,
 			"sourceMap": false
 		},
 		"demo": {
-			"source": "demo/demo.html",
+			"source": [
+				"demo/demo.html"
+			],
 			"distDir": "var/dist"
 		}
 	},
