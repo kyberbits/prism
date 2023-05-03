@@ -1,6 +1,0 @@
-*:focus {
-	outline-color: var(--color-accent);
-	outline-offset: 4px;
-	outline-style: solid;
-	outline-width: 2px;
-}

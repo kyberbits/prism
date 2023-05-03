@@ -1,12 +1,12 @@
 {
 	"name": "@kyberbits/prism",
-	"version": "1.0.3",
+	"version": "2.0.1",
 	"description": "A CSS toolkit.",
 	"main": "prism.css",
 	"targets": {
 		"src": {
 			"source": [
-				"src/prism.css"
+				"src/prism.scss"
 			],
 			"distDir": ".",
 			"optimize": false,
@@ -37,6 +37,7 @@
 	},
 	"homepage": "https://github.com/kyberbits/prism#readme",
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.7.0",
 		"parcel": "^2.7.0",
 		"prettier": "2.7.1"
 	}

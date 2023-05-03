@@ -4,12 +4,12 @@ A CSS toolkit.
 ## Features
 - No layout support
 - No CSS classes (almost)
-- Dark and Light mode build-in
+- Dark and Light mode built-in
 
 ## Control of Dark Mode
-- Default: match system (prefers-color-scheme)
+- Defaults to Dark Mode but matches system if available (prefers-color-scheme)
 - Disable Dark Mode: Add `disable-dark-mode` class to the `<html>` tag
-- Force Dark Mode: Add `force-dark-mode` class to the `<html>` tag
+- Disable Light Mode: Add `disable-light-mode` class to the `<html>` tag
 
 ## Option 1: Use Everything
 Import the combined CSS file: [./prism.css](./prism.css)
@@ -17,28 +17,15 @@ Import the combined CSS file: [./prism.css](./prism.css)
 @import url("kyberbits/prism");
 ```
 
-## Option 2: Use Only What You Want
-Import the each CSS file individually: [./src/](./src/)
-```css
-/* Example */
-@import url("../node_modules/@kyberbits/prism/src/variables.css");
-@import url("../node_modules/@kyberbits/prism/src/reset.css");
-@import url("../node_modules/@kyberbits/prism/src/inline.css");
-@import url("../node_modules/@kyberbits/prism/src/form.css");
-```
-The correct order and full list can be found here: [./src/prism.css](./src/prism.css)
-
 ## Customization/Theming
-CSS variables can be used to customize prism.
-
 ```css
 /* Example */
 :root {
-    --color-accent: #ae0000;
+	--k-prism-dark-color-background-accent: #00bfff;
 }
 ```
 
-All variables defined here: [./src/variables.css](./src/variables.css)
+All variables defined here: [src/prism.scss](src/prism.scss)
 
 ## Special Thanks
 This project was inspired by  [Bolt.css](https://boltcss.com/)
