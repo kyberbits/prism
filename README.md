@@ -14,7 +14,7 @@ A CSS toolkit.
 ## Option 1: Use Everything
 Import the combined CSS file: [./prism.css](./prism.css)
 ```css
-@import url("kyberbits/prism");
+@import url('../node_modules/@kyberbits/prism/prism.css');
 ```
 
 ## Customization/Theming
