@@ -173,8 +173,7 @@ article p {
 article img {
 	max-height: 50vh;
 	max-width: 100%;
-	margin: auto;
-	display: block;
+	display: inline-block;
 }
 
 article ul,
