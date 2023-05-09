@@ -100,7 +100,34 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+	font-family: var(--k-prism-font-title-family);
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.17rem;
+}
+
+h5 {
+	font-size: 0.83rem;
+}
+
+h6 {
+	font-size: 0.67rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
 nav {
 	font-family: var(--k-prism-font-title-family);
 }

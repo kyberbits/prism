@@ -4,8 +4,8 @@ body {
 
 section {
 	padding: 1.5rem;
-	border: var(--border);
-	border-radius: var(--size-border-radius);
+	background-color: var(--k-prism-color-background-secondary);
+	border: 1px solid var(--k-prism-color-foreground-secondary);
 }
 
 section:not(:last-child) {
