@@ -165,8 +165,10 @@ article {
 	}
 
 	img {
-		max-width: 100%;
+		display: block;
+		margin: auto;
 		max-height: 50vh;
+		max-width: 100%;
 	}
 
 	ul,
