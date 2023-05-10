@@ -78,10 +78,14 @@ html {
 	a {
 		color: var(--k-prism-color-link);
 		text-decoration: none;
-
+		display: inline-block;
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+
+	img {
+		display: inline-block;
 	}
 }
 
@@ -154,6 +158,12 @@ button {
 	}
 }
 
+details {
+	summary {
+		cursor: pointer;
+	}
+}
+
 article {
 	> *:not(:last-child) {
 		margin-bottom: 1rem;
@@ -165,7 +175,7 @@ article {
 	}
 
 	img {
-		display: inline-block;
+		display: block;
 		max-height: 50vh;
 		max-width: 100%;
 	}
