@@ -89,7 +89,6 @@ html body {
 html a {
 	color: var(--k-prism-color-link);
 	text-decoration: none;
-	display: inline-block;
 }
 
 html a:hover {
