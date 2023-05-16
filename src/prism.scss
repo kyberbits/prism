@@ -170,9 +170,10 @@ article {
 	}
 
 	img {
-		display: block;
+		display: inline-block;
 		max-height: 50vh;
 		max-width: 100%;
+		vertical-align: middle;
 	}
 
 	ul,
